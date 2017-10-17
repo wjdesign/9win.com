@@ -95,11 +95,35 @@ body {
 	display: inline-block;
 	height: 35px;
 	line-height: 34px;
+	text-align: center;
 }
 #menu .navi li a {
 	color: #fff;
 	font-size: 16px;
 	text-decoration: none;
+	display: block;
+	transform: perspective(1px) translateZ(0);
+	position: relative;
+    overflow: hidden;
+}
+#menu .navi li a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #2098D1;
+    height: 2px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+#menu .navi li a:hover:before {
+    right: 0;
 }
 
 /*===slider===*/
@@ -241,7 +265,7 @@ body {
     -o-transition: all 0.35s ease;
     transition: all 0.35s ease;
 }
-#company .companyCol .companyItem i:hover:after {
+#company .companyCol .companyItem:hover i:after {
 	filter: alpha(opacity=100);
     -khtml-opacity: 1;
     -moz-opacity: 1;
@@ -299,7 +323,7 @@ body {
 	display: block;
 	position: absolute;
 	bottom: 50px;
-	border: 1px solid #5b6882;
+	border: 1px dotted #5b6882;
 	padding: 12px;
 }
 #mobile .qrcode span {
@@ -351,4 +375,7 @@ body {
 }
 #footer .footer_link a:hover {
 	color: #0faaf0;
+}
+#footer .copyright {
+	color: #fff;
 }
