@@ -24,16 +24,69 @@
 	<script src="js/main.js"></script>
 </head>
 <body>
-	<div id="header" class="header">
-<!-- 		<div class="timer"></div>
-		<div class="login"></div>
-		<div class="menu-navi"></div> -->
+	<div id="header">
+		<div id="timer">
+			<div class="container"></div>
+		</div>
+		<div id="logo-bar">
+			<div class="container">
+				<a class="logo" href="#">
+					<img src="./images/logo.gif" alt="">
+				</a>
+			</div>
+		</div>
+		<div id="menu">
+			<div class="container">
+				<ul class="navi">
+					<li><a href="#">首页</a></li>
+					<li><a href="">老虎机</a></li>
+					<li><a href="">捕鱼达人</a></li>
+					<li><a href="">真人视讯</a></li>
+					<li><a href="">运动体育</a></li>
+					<li><a href="">彩票娱乐</a></li>
+					<li><a href="">最新优惠</a></li>
+				</ul>
+			</div>
+			<script>
+				$('#menu ul li a').click(function() {
+				    if (! $(this).attr('href') ) {
+				        alert('很抱歉，尚未開放此功能。');
+				    }
+				})
+			</script>
+		</div>
 	</div>
 
+	<!-- slider -->
+
 	<script>
-		$(function () {
-			$("#header").load("header.html");
-		})
+		$(function() {  
+        	setInterval("GetTime()", 1000);
+        });
+
+        function GetTime() {  
+	        var mon, day, now, hour, min, ampm, time, str, tz, end, beg, sec;
+	        mon = new Array("一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月",  
+	                "九月", "十月", "十一月", "十二月");
+	        day = new Array("周日", "周一", "周二", "周三", "周四", "周五", "周六");  
+	        now = new Date();  
+	        hour = now.getHours();  
+	        min = now.getMinutes();  
+	        sec = now.getSeconds();  
+	        if (hour < 10) {  
+	            hour = "0" + hour;  
+	        }  
+	        if (min < 10) {  
+	            min = "0" + min;  
+	        }  
+	        if (sec < 10) {  
+	            sec = "0" + sec;  
+	        }  
+	        $("#timer .container").html(
+	        	"<p>"+now.getFullYear()+" "+mon[now.getMonth()]+now.getDate()+"日"+" "+day[now.getDay()]+" "+hour+":"+min+":"+sec+"</p>");
+	    }
+
 	</script>
+
 </body>
 </html>
