@@ -6,7 +6,10 @@
 body {
 	font-family: microsoft YaHei;
 	box-sizing: border-box;
-	background: #e7e7e7;
+}
+iframe {
+    width: 100%;
+    height: 100%;
 }
 .container {
 	width: 1100px!important;
@@ -295,7 +298,7 @@ body {
 /*===Mobile===*/
 #mobile {
 	background: #14274c;
-	height: 360px;
+	height: 361px;
 	position: relative;
 }
 #mobile h6 {
@@ -340,6 +343,257 @@ body {
 }
 #mobile img.mobile-bg {
 	position: absolute;
+}
+
+/*===Slot===*/
+#slot .bgControll {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+#slot .bgControll .bg-1 {
+    background: url(../images/slot/bg-01.jpg) no-repeat top center;
+    width: 100%;
+    height: 359px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#slot .bgControll .bg-2 {
+    background: url(../images/slot/bg-02.jpg) no-repeat top center;
+    width: 100%;
+    height: 359px;
+    position: absolute;
+    top: 359px;
+    left: 0;
+}
+#slot .bgControll .bg-3 {
+    background: url(../images/slot/bg-03.jpg) no-repeat top center;
+    width: 100%;
+    height: 359px;
+    position: absolute;
+    top: 718px;
+    left: 0;
+}
+#slot .gameCenter {
+    width: 100%;
+    margin-top: 170px;
+    position: relative;
+}
+#slot .gameCenter .search-bar {
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+#slot .gameCenter ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#slot .gameCenter ul li {
+    background-size: cover;
+    cursor: pointer;
+    width: 264px;
+    height: 150px;
+    display: inline-block;
+    list-style: none;
+    transition: .3s;
+}
+#slot .gameCenter ul .ptButton {
+    background: url(../images/slot/pt.jpg) no-repeat 0 0;
+}
+#slot .gameCenter ul .qtButton {
+    background: url(../images/slot/qt.jpg) no-repeat 0 0;
+}
+#slot .gameCenter ul .dtButton {
+    background: url(../images/slot/dt.jpg) no-repeat 0 0;
+}
+#slot .gameCenter ul .mgButton {
+    background: url(../images/slot/mg.jpg) no-repeat 0 0;
+}
+#slot .gameCenter .gameContent {
+    width: 100%;
+}
+#slot .gameCenter .gameContent .ptEle {
+    width: 100%;
+}
+#slot .gameCenter .gameContent .gameWrap {
+    width: 100%;
+    background: rgba(255,255,255,.3);
+    color: #fff;
+}
+#slot .gameCenter .gameContent .gameWrap .gameList {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    width: 186px;
+    height: 188px;
+    margin: 7px;
+    padding: 5px 15px;
+    border: solid 1px rgb(76, 69, 69);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#slot .gameCenter .gameContent .gameWrap .gameList .gameIcon {
+    cursor: pointer;
+    width: 155px;
+    height: 145px;
+}
+#slot .gameCenter .gameContent .gameWrap .gameList .gameIcon img {
+    width: 100%;
+}
+#slot .gameCenter .gameContent .gameWrap .gameList .gameIcon .gameEnter {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: rgba(0,0,0,.7);
+    opacity: 0;
+    z-index: -1;
+    padding: 50% 15px;
+}
+#slot .gameCenter .gameContent .gameWrap .gameList .gameIcon:hover .gameEnter {
+    z-index: 0;
+    opacity: 1;
+    transition: all ease-in-out .3s;
+}
+#slot .gameCenter .gameContent .gameWrap .gameList .gameIcon .enterBtn {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    background: #20b1c2;
+    height: 40px;
+    transition: .3s;
+    opacity: .8;
+}
+#slot .gameCenter .gameContent .gameWrap .gameList .gameIcon .enterBtn:hover {
+    opacity: 1;
+}
+#slot .gameCenter .gameContent .gameWrap .gameList p {
+    margin: 10px auto;
+    text-align: center;
+    color: #eee;
+    font-size: 14px;
+}
+
+/*===Live===*/
+#live .bgControll {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+#live .bgControll .bg-1 {
+    background: url(../images/live/bg-01.jpg) no-repeat top center;
+    width: 100%;
+    height: 212px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#live .bgControll .bg-2 {
+    background: url(../images/live/bg-02.jpg) no-repeat top center;
+    width: 100%;
+    height: 212px;
+    position: absolute;
+    top: 212px;
+    left: 0;
+}
+#live .bgControll .bg-3 {
+    background: url(../images/live/bg-03.jpg) no-repeat top center;
+    width: 100%;
+    height: 212px;
+    position: absolute;
+    top: 424px;
+    left: 0;
+}
+#live .bgControll .bg-4 {
+    background: url(../images/live/bg-04.jpg) no-repeat top center;
+    width: 100%;
+    height: 211px;
+    position: absolute;
+    top: 636px;
+    left: 0;
+}
+#live .gameCenter {
+    width: 100%;
+    margin-top: 170px;
+}
+#live .gameCenter ul {
+    height: 50px;
+    line-height: 50px;
+    background: #284370;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+#live .gameCenter ul li {
+    color: #fff;
+    cursor: pointer;
+    width: 50%;
+    float: left;
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+    list-style: none;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+#live .gameCenter ul li.active {
+    background: #fff;
+    color: #284370;
+}
+#live .gameCenter .gameRoom {
+    padding: 10px;
+    background: rgba(0,0,0,.5);
+}
+#live .gameCenter .gameRoom .bgLive {
+    width: 100%;
+    height: 450px;
+    background: url(../images/live/bgLive.jpg) no-repeat top center;
+    padding: 10px;
+}
+#live .gameCenter .gameRoom .agLive {
+    width: 100%;
+    height: 450px;
+    background: url(../images/live/agLive.jpg) no-repeat top center;
+    padding: 10px;
+}
+#live .gameCenter .gameRoom h4 {
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 0 10px;
+    letter-spacing: 3px;
+}
+#live .gameCenter .gameRoom a {
+    background: #20b1c2;
+    border: 1px solid #52d1e0;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s;
+}
+#live .gameCenter .gameRoom a:hover {
+    background: #39c7d8;
+}
+#live .gameCenter .gameRoom .blackBoard {
+    border-radius: 10px;
+    background: rgba(0,0,0,.5);
+    width: 230px;
+    height: 130px;
+    margin: 120px auto 0;
+    text-align: center;
 }
 
 /*===Footer===*/
